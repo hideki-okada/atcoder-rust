@@ -1,0 +1,2 @@
+# atcoder-rust
+rustでatcoderやっていき
