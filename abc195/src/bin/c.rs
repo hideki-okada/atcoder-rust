@@ -9,7 +9,6 @@ macro_rules! debug {
 #[allow(non_snake_case)]
 fn main() {
     input! {
-        A: [u32; 4]
+        N: u64
     }
-    println!("{}", A.iter().min().unwrap())
 }

@@ -9,7 +9,9 @@ macro_rules! debug {
 #[allow(non_snake_case)]
 fn main() {
     input! {
-        A: [u32; 4]
-    }
-    println!("{}", A.iter().min().unwrap())
+        AB: u32,
+        BC: u32,
+        _CA: u32
+    };
+    println!("{}", AB * BC / 2)
 }

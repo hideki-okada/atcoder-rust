@@ -1,4 +1,5 @@
 use proconio::{fastout, input};
+use regex::internal::Char;
 #[allow(unused_macros)]
 macro_rules! debug {
       ($($a:expr),*) => {
@@ -9,7 +10,8 @@ macro_rules! debug {
 #[allow(non_snake_case)]
 fn main() {
     input! {
-        A: [u32; 4]
+        X: String
     }
-    println!("{}", A.iter().min().unwrap())
+    let v = X.split('.').
+    v
 }

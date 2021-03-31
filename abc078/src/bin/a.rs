@@ -1,4 +1,5 @@
 use proconio::{fastout, input};
+use std::cmp::Ordering;
 #[allow(unused_macros)]
 macro_rules! debug {
       ($($a:expr),*) => {
@@ -9,7 +10,15 @@ macro_rules! debug {
 #[allow(non_snake_case)]
 fn main() {
     input! {
-        A: [u32; 4]
+        X: char,
+        Y: char
     }
-    println!("{}", A.iter().min().unwrap())
+    println!(
+        "{}",
+        match X.cmp(&Y) {
+            Ordering::Less => '<',
+            Ordering::Equal => '=',
+            Ordering::Greater => '>',
+        }
+    )
 }

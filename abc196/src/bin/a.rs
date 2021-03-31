@@ -9,7 +9,10 @@ macro_rules! debug {
 #[allow(non_snake_case)]
 fn main() {
     input! {
-        A: [u32; 4]
+        a: i32,
+        b: i32,
+        c: i32,
+        d: i32
     }
-    println!("{}", A.iter().min().unwrap())
+    println!("{}", b - c)
 }

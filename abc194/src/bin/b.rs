@@ -1,3 +1,4 @@
+use itertools::Itertools;
 use proconio::{fastout, input};
 #[allow(unused_macros)]
 macro_rules! debug {
@@ -9,7 +10,9 @@ macro_rules! debug {
 #[allow(non_snake_case)]
 fn main() {
     input! {
-        A: [u32; 4]
+        N: usize,
+        AB: [(u32, u32); N]
     }
-    println!("{}", A.iter().min().unwrap())
+    let A = AB.iter().map(|&o| o.0).sorted().collect_vec();
+    let B = AB.iter().map(|&o| o.1).sorted().collect_vec();
 }

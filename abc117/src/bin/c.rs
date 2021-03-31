@@ -8,8 +8,5 @@ macro_rules! debug {
 #[fastout]
 #[allow(non_snake_case)]
 fn main() {
-    input! {
-        A: [u32; 4]
-    }
-    println!("{}", A.iter().min().unwrap())
+    input! {}
 }

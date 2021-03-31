@@ -1,4 +1,4 @@
-use proconio::{fastout, input};
+use proconio::{input, fastout};
 #[allow(unused_macros)]
 macro_rules! debug {
       ($($a:expr),*) => {
@@ -8,8 +8,9 @@ macro_rules! debug {
 #[fastout]
 #[allow(non_snake_case)]
 fn main() {
-    input! {
-        A: [u32; 4]
+    input!{
+        T: f64,
+        X: f64,
     }
-    println!("{}", A.iter().min().unwrap())
+    println!("{}", T / X)
 }

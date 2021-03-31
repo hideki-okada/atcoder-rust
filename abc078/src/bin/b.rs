@@ -9,7 +9,9 @@ macro_rules! debug {
 #[allow(non_snake_case)]
 fn main() {
     input! {
-        A: [u32; 4]
+        X: u32,
+        Y: u32,
+        Z: u32
     }
-    println!("{}", A.iter().min().unwrap())
+    println!("{}", (X - Z) / (Y + Z));
 }

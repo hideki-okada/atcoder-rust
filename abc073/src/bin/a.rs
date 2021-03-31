@@ -9,7 +9,13 @@ macro_rules! debug {
 #[allow(non_snake_case)]
 fn main() {
     input! {
-        A: [u32; 4]
+        N: u32
     }
-    println!("{}", A.iter().min().unwrap())
+    if N / 10 == 9 {
+        println!("Yes")
+    } else if N - (N / 10) * 10 == 9 {
+        println!("Yes")
+    } else {
+        println!("No")
+    }
 }

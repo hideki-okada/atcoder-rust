@@ -9,7 +9,16 @@ macro_rules! debug {
 #[allow(non_snake_case)]
 fn main() {
     input! {
-        A: [u32; 4]
+        A: u32,
+        B: u32
     }
-    println!("{}", A.iter().min().unwrap())
+    if A + B >= 15 && B >= 8 {
+        println!("{}", 1);
+    } else if A + B >= 10 && B >= 3 {
+        println!("{}", 2);
+    } else if A + B >= 3 {
+        println!("{}", 3);
+    } else {
+        println!("{}", 4);
+    }
 }

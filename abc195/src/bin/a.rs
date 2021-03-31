@@ -9,7 +9,12 @@ macro_rules! debug {
 #[allow(non_snake_case)]
 fn main() {
     input! {
-        A: [u32; 4]
+        M: u32,
+        H: u32
     }
-    println!("{}", A.iter().min().unwrap())
+    if H % M == 0 {
+        println!("Yes")
+    } else {
+        println!("No")
+    }
 }

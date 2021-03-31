@@ -9,7 +9,8 @@ macro_rules! debug {
 #[allow(non_snake_case)]
 fn main() {
     input! {
-        A: [u32; 4]
+        N: u32,
+        M: u32
     }
-    println!("{}", A.iter().min().unwrap())
+    println!("{}", 2u32.pow(M) * ((N - M) * 100 + M * 1900));
 }

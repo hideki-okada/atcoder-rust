@@ -9,7 +9,15 @@ macro_rules! debug {
 #[allow(non_snake_case)]
 fn main() {
     input! {
-        A: [u32; 4]
+        N: usize,
+        L: [u32; N]
     }
-    println!("{}", A.iter().min().unwrap())
+    println!(
+        "{}",
+        if L.iter().sum::<u32>() > 2 * L.iter().max().unwrap() {
+            "Yes"
+        } else {
+            "No"
+        }
+    )
 }

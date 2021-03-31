@@ -9,7 +9,8 @@ macro_rules! debug {
 #[allow(non_snake_case)]
 fn main() {
     input! {
-        A: [u32; 4]
+        N: usize,
+        LR: [(u32, u32);N]
     }
-    println!("{}", A.iter().min().unwrap())
+    println!("{}", LR.iter().fold(0, |sum, lr| sum + (lr.1 - lr.0 + 1)));
 }
